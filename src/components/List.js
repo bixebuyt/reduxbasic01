@@ -9,9 +9,8 @@ class List extends Component {
 			myArray: ['PHP', 'Android', 'Java'],
 			isAddding: false
 		}
-		this.remove = this.remove.bind(this);
 	}
-	remove(index) {
+	remove = (index) => {
 		this.state.myArray.splice(index, 1);
 		this.setState(this.state);
 	}
