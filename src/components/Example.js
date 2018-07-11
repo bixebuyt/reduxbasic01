@@ -27,7 +27,7 @@ var mangReducer = (state = ['PHP','Android', 'Java'], action) => {
 	switch (action.type) {
 		case 'ADD_ITEM' :
 			return {					
-				mang: [...state, action.item]
+				mang: [...state, ...action.item]
 			}
 		case 'REMOVE_ITEM' : 
 			return {
@@ -73,4 +73,4 @@ store.dispatch({
 	index: 1
 });
 
-console.log(store.getState());
+export default store;
